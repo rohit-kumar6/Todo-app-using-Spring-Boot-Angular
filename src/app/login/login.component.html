@@ -1,0 +1,12 @@
+<p>Login</p> 
+<!-- 1 way Data Binding using interpolation {{name}}  -->
+<!-- Event Binding help us to Bind a view event to component event Example : (click)=handleLogin() -->
+<!-- [()] Banana in a box / Anuglar directive -->
+<!-- ngModel -> 2 way data Binding (it take default value from login.componenet.ts and also update that value from Input field) -->
+
+<small *ngIf='invalidLogin'> {{errorMessage}} </small>
+<div>
+Username : <input type="text" name = "username" [(ngModel)]="username" >
+Password : <input type="password" name = "password" [(ngModel)]="password">
+<button (click)=handleLogin()> Login </button>
+</div>
